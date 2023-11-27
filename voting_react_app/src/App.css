@@ -1,3 +1,8 @@
+iframe
+{
+    display: none;
+}
+
 .login-container {
   display: flex;
   flex-direction: column;

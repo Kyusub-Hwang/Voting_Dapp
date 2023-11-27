@@ -21,13 +21,13 @@ function App() {
     getCandidates();
     getRemainingTime();
     getCurrentStatus();
-    getVoted();
-
+  
     if (window.ethereum){
       window.ethereum.on('accountsChanged', handleAccountsChanged);
+      // getVoted();
     }
 
-    return () => {
+    return() => {
       if (window.ethereum){
         window.ethereum.removeListener('accountsChanged', handleAccountsChanged);
       }
@@ -37,6 +37,9 @@ function App() {
   const handleAccountsChanged = (accounts) => {
     if (accounts.length > 0 && account !== accounts[0] ){
       setAccount(accounts[0]);
+      // getCandidates();
+      // getRemainingTime();
+      // getCurrentStatus();
       getVoted();
     } else {
       setIsConnected(false);
