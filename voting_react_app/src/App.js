@@ -12,7 +12,7 @@ function App() {
   const [account, setAccount] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
   const [votingStatus, setVotingStatus] = useState(false);
-  const [remainingTime, setremainingTime] = useState('');
+  const [remainingTime, setRemainingTime] = useState('');
   const [candidates, setCandidates] = useState([]);
   const [number, setNumber] = useState(0);
   const [canVote, setCanVote] = useState(true);
@@ -31,7 +31,7 @@ function App() {
         window.ethereum.removeListener('accountsChanged', handleAccountsChanged);
       }
     }
-  },[]);
+  });
 
   const handleAccountsChanged = (accounts) => {
     if (accounts.length > 0 && account !== accounts[0] ){
@@ -102,7 +102,8 @@ function App() {
       contractAddress, contractAbi, signer
     );
     const time = await contractInstance.getRemainingTime();
-    setremainingTime(parseInt(time,16));
+    // setRemainingTime(parseInt(time,16));
+    setRemainingTime(parseInt(time));
   }
 
   const connectToMetamask = async () => {
