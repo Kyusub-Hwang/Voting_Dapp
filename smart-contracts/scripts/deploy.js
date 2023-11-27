@@ -2,7 +2,7 @@ async function main() {
   const Voting = await ethers.getContractFactory("Voting");
 
   // Start deployment, returning a promise that resolves to a contract object
-  const Voting_ = await Voting.deploy(["Jason", "John", "Chris", "Jordan"], 90);
+  const Voting_ = await Voting.deploy(["Jason", "John", "Chris", "Jordan"], 60);
   console.log("Contract address:", Voting_.address);
 }
 
