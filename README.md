@@ -1,7 +1,4 @@
-# Voting_Dapp
-blockchain based voting dapp
-
-## Decentralized Voting Web3 </br> 
+## Web3 Decentralized Voting </br> 
 Tech Stacks
 * Backend : Solidity Smart Contract + Hardhat + ethersJS (Rinkeby Network) </br>
 * Frontend : ReactJS </br>
